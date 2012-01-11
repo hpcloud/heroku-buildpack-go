@@ -52,5 +52,6 @@ for f in $(find $p -type f -name '*.go')
 do goinstall $(dirname $f)
 done
 
-mv $p/* $build
+mkdir -p $build/bin
+mv $GOPATH/bin/* $build/bin
 rm -rf $build/.heroku
