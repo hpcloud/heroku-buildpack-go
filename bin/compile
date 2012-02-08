@@ -40,9 +40,7 @@ cp -R $build/* $p
 
 unset GIT_DIR # unset git dir or it will mess with goinstall
 echo "-----> Running goinstall"
-for f in $(find $p -type f -name '*.go')
-do goinstall $(dirname $f)
-done
+go install $p/...
 
 mkdir -p $build/bin
 mv $GOPATH/bin/* $build/bin
