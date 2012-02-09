@@ -6,10 +6,11 @@ set -e
 mkdir -p "$1" "$2"
 build=$(cd "$1/" && pwd)
 cache=$(cd "$2/" && pwd)
-name=$(cat $build/hack-appname)
-ver=release.r60.3
-if test -f $build/hack-goversion
-then ver=$(cat $build/hack-goversion)
+name=$(cat $build/.godir)
+ver="weekly.2012-01-27"
+
+if test -f $build/.gover
+then ver=$(cat $build/.gover)
 fi
 
 echo "-----> Using Go $ver"
