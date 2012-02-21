@@ -14,7 +14,7 @@ fi
 
 if test "$ver" '<' weekly.2012-02-14
 then GOINSTALL=goinstall
-else GOINSTALL=go install
+else GOINSTALL='go install'
 fi
 
 echo "-----> Using Go $ver"
