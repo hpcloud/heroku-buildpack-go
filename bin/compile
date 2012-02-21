@@ -12,7 +12,7 @@ if test -f $build/hack-goversion
 then ver=$(cat $build/hack-goversion)
 fi
 
-if "$ver" '<' "weekly.2012-02-14"
+if test "$ver" '<' weekly.2012-02-14
 then GOINSTALL=goinstall
 else GOINSTALL=go install
 fi
