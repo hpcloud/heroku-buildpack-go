@@ -12,9 +12,14 @@ if test -f $build/hack-goversion
 then ver=$(cat $build/hack-goversion)
 fi
 
+gogetinst() {
+    go get "$1"
+    go install "$1"
+}
+
 if test "$ver" '<' weekly.2012-02-14
 then GOINSTALL=goinstall
-else GOINSTALL='go install'
+else GOINSTALL=gogetinst
 fi
 
 echo "-----> Using Go $ver"
