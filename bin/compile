@@ -21,7 +21,7 @@ gogetinst() {
     go install "$1"
 }
 
-if test "$ver" '<' weekly.2012-02-14
+if test "$ver" '<' weekly.2012-02-07
 then GOINSTALL=goinstall
 else GOINSTALL=gogetinst
 fi
