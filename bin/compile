@@ -13,7 +13,11 @@ then ver=$(cat $build/hack-goversion)
 fi
 
 gogetinst() {
+    echo go version
+    go version
+    echo go get "$1"
     go get "$1"
+    echo go install "$1"
     go install "$1"
 }
 
